@@ -181,6 +181,13 @@ body {
 .carousel-img {
     position: relative;
     height: 100%;
+    overflow: hidden;
+}
+
+.carousel-img .carousel{
+    float: left;
+    height: 100%;
+    width: 912px;
 }
 
 .carousel-img > i {
@@ -197,6 +204,10 @@ body {
 .carousel-img .fa-chevron-right {
     position: absolute;
     right: 10px;
+}
+
+.carousel-img>div{
+    height: 100%;
 }
 
 .carousel-dot {
