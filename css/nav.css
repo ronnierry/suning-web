@@ -35,7 +35,7 @@ body {
     box-sizing: border-box;
 }
 
-.ng-toolbar .ng-toolbar-1 div, .ng-toolbar .ng-toolbar-2 div {
+.ng-toolbar .ng-toolbar-1 > div, .ng-toolbar .ng-toolbar-2 > div {
     float: left;
     height: 100%;
     margin-left: 5px;
@@ -44,6 +44,29 @@ body {
 .ng-toolbar-1 div, .ng-toolbar-2 div {
     padding-left: 5px;
     box-sizing: border-box;
+}
+
+.ng-toolbar-1 > div:hover, .ng-toolbar-2 > div:hover {
+    background-color: #FFFFFF;
+    color: #FF6600;
+}
+
+.ws-navigation {
+    position: relative;
+}
+
+.ws-navigation:hover .ws-navigation-down {
+    height: 266px;
+    transition: height 0.2s;
+}
+
+.ws-navigation-down {
+    position: absolute;
+    top: 100%;
+    height: 0px;
+    width: 1091px;
+    background-color: #FFFFFF;
+    z-index: 1;
 }
 
 .ng-highlight-menu {
@@ -142,7 +165,6 @@ body {
 
 .content-2 {
     height: 482px;
-    background-color: red;
 }
 
 .content-2 > div {
@@ -161,21 +183,15 @@ body {
 }
 
 .content-2-c-carousel {
-    height: 70%;
+    height: 100%;
     width: 100%;
     background-color: #FFAA00;
-}
-
-.content-2-c-foot {
-    height: 30%;
-    width: 100%;
-    background-color: #FFFFFF;
 }
 
 .content-2-end {
     width: 176px;
     height: 100%;
-    background-color: #FF0FFF;
+    background-color: #FFFFFF;
 }
 
 .carousel-img {
@@ -184,10 +200,12 @@ body {
     overflow: hidden;
 }
 
-.carousel-img .carousel{
+.carousel-img .carousel {
     float: left;
     height: 100%;
     width: 912px;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
 }
 
 .carousel-img > i {
@@ -206,7 +224,7 @@ body {
     right: 10px;
 }
 
-.carousel-img>div{
+.carousel-img > div {
     height: 100%;
 }
 
@@ -221,10 +239,116 @@ body {
 .carousel-dot li {
     float: left;
     border: 1px;
-    width:20px;
-    height:20px;
-    background:#E7E8EA;
-    border-radius:100%;
+    width: 20px;
+    height: 20px;
+    background: #E7E8EA;
+    border-radius: 100%;
     list-style: none;
     margin: 0 10px;
+}
+
+.divSum {
+    transition: all 0.3s;
+
+}
+
+.user-info {
+    width: 100%;
+    height: 94px;
+}
+
+.user-img {
+    width: 100%;
+    height: 52px;
+    margin-top: 23px;
+}
+
+.user-img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.user-img .hover {
+    width: 52px;
+    height: 100%;
+    display: block;
+    background: url(//res.suning.cn/project/cmsWeb/suning/homepage/v6/css/images/index.png?v=2018101801) -95px -23px;
+    margin: 0 auto;
+}
+
+.user-info p {
+    text-align: center;
+    margin-top: 11px;
+}
+
+.gift {
+    width: 100%;
+    height: 25px;
+}
+
+.gift .gift-new, .gift .gift-super {
+    width: 40%;
+    height: 100%;
+
+    border: 1px solid #F90;
+    color: #ffa114;
+    text-align: center;
+    line-height: 22px;
+}
+
+.gift .gift-new {
+    float: left;
+    margin-left: 5%;
+}
+
+.gift .gift-super {
+    float: right;
+    margin-right: 5%;
+}
+
+.user-new {
+    width: 100%;
+    height: 188px;
+    border-top: 1px solid #d0c4c4;
+    border-bottom: 1px solid #d0c4c4;
+    margin-top: 18px;
+    padding: 0 5px;
+}
+
+.new-item span {
+    color: #F60;
+    font-style: normal;
+    margin-left: 9px;
+}
+
+.user-features {
+    width: 100%;
+    height: 134px;
+}
+
+.user-features .floor {
+    width: 100%;
+    height: 50%;
+}
+
+.user-features .first-floor {
+    width: 100%;
+    height: 50%;
+}
+
+.user-new .new-item {
+    margin-top: 9px;
+    height: 27%;
+}
+
+.user-features-item {
+    float: left;
+    color: #FF9900;
+    border: 1px solid #d0c4c4;
+    width: 33.33333%;
+    height: 100%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
 }

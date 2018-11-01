@@ -1,4 +1,4 @@
-const imgUrl = ["../img/index/154056043102773851.jpg", "../img/index/154090053442295901.jpg", "../img/index/bd6f82cda6fe46caa0c64bcb2db0fc75.jpg"];
+const imgUrl = ["./img/index/154056043102773851.jpg", "./img/index/154090053442295901.jpg", "./img/index/bd6f82cda6fe46caa0c64bcb2db0fc75.jpg"];
 let carouselDiv = document.getElementById('carousel-img');
 let height = carouselDiv.offsetHeight;
 const width = carouselDiv.offsetWidth;
@@ -7,6 +7,7 @@ let className = 'carousel'
 // 容器
 const divSum = document.createElement('div');
 divSum.setAttribute('style', 'width : ' + width * 3 + 'px')
+divSum.setAttribute("class","divSum")
 let carouselDot = document.getElementById('carousel-dot');
 imgUrl.forEach(
     x => {
@@ -15,7 +16,7 @@ imgUrl.forEach(
         divItem.setAttribute('class', className);
         divItem.style.cssFloat = 'left'
         divItem.setAttribute("style", 'background-image : url("' + x + '")')
-        divItem.innerText = 'test_' + x;
+        //divItem.innerText = 'test_' + x;
         divItem.backgroundImage = x;
 
         divSum.appendChild(divItem);
@@ -31,7 +32,7 @@ setInterval(() => {
     i++;
     let div = divSum;
     let length = imgUrl.length;
-    if (i == length - 1) {
+    if (i == length) {
         div.style.transform = 'translateX(0px)';
         i = 0;
     } else {
@@ -39,7 +40,7 @@ setInterval(() => {
     }
     carouselDot.childNodes.forEach(
        x=>{
-           x.style.backgroundColor = ''
+          // x.style.backgroundColor = ''
        }
     )
 
